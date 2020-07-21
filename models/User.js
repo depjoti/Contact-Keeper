@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 
-const UserSchema = mongoose.Schema({
+const UserSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
   },
-
   email: {
     type: String,
     required: true,
@@ -15,7 +14,6 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-
   date: {
     type: Date,
     default: Date.now,
